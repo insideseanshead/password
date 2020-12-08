@@ -14,32 +14,13 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 // Code Below this line.
+// add variables for uppercase and lowercase 
+const upperCase= [] = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ").split("")
+const lowerCase= [] = ("abcdefghijklmnopwqrstuvwxyz").split("")
+
+
 function generatePassword() {
-  var i = confirm('This is a confirm');
-  console.log(i);
-
-  var whatEver = prompt('Another string!')
-  console.log(whatEver)
+  
+  
 }
 
-var randomMath = Math.floor(Math.random() *10)+1;
-console.log(randomMath);
-
-// for(var count = 0; count < 3; count++){
-//   alert("TACOS")
-// }
-
-
-var count = 3
-console.log('Do while')
-do{
-  console.log(count)
-  count++;
-} while(count < 3)
-
-count = 3
-console.log('while')
-while(count<3){
-  console.log(count);
-  count++;
-}
