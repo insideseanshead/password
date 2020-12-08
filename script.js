@@ -25,12 +25,9 @@ const lowerCase= [] = ("abcdefghijklmnopqrstuvwxyz").split("")
 // array of random special characters
 const specialChar = [] = ("!@#$%&?+-*").split("")
 
-
 // array of numbers 1 to 10.
 const numbers = [1,2,3,4,5,6,7,8,9]
 
-randomNum()
-console.log(upperCase,lowerCase,specialChar)
 function generatePassword() {
   let passLength = prompt("How many characters would you like your password to be?")
   // check pass length between 12 & 72 characters in length
@@ -62,14 +59,18 @@ function generatePassword() {
       passValues.push(numbers)
     }
   //TODO: Check to make sure user added at least one type of character
-    
-  //TODO: use loop to pull random characters from passValues Array
+    if(upperCaseSelect === false && lowerCaseSelect === false && spectialSelect === false && numSelect === false){
+      alert("You must select at least one type of character to include in your password.")
+    } else {
+    //TODO: use loop to pull random characters from passValues Array
+      
+    //TODO: Make sure given password has at least one of each selected character
 
-  //TODO: Make sure given password has at least one of each selected character
+    //TODO: If password does not meet condition create new password from pre selected optopns until conditions are met.
 
-  //TODO: If password does not meet condition create new password from pre selected optopns until conditions are met.
-
-  //TODO: If password meets all conditions return password
+    //TODO: If password meets all conditions return password
+    }
+  
   }
 }
 
