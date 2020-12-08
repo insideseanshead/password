@@ -23,8 +23,12 @@ const specialChar = [] = ("!@#$%&?+-*").split("")
 
 
 // function to generate random number.
+function randomNum() {
+  num=Math.floor(Math.random()*10)
+  console.log(num)
+}
 
-
+randomNum()
 console.log(upperCase,lowerCase,specialChar)
 function generatePassword() {
   
