@@ -18,7 +18,14 @@ generateBtn.addEventListener("click", writePassword);
 const upperCase= [] = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ").split("")
 const lowerCase= [] = ("abcdefghijklmnopwqrstuvwxyz").split("")
 
+// array of random special characters
+const specialChar = [] = ("!@#$%&?+-*").split("")
 
+
+// function to generate random number.
+
+
+console.log(upperCase,lowerCase,specialChar)
 function generatePassword() {
   
   
