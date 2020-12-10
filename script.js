@@ -36,36 +36,36 @@ function generatePassword() {
   if(passLength < 12 || passLength > 72){
     alert("please pick a number between 12 and 72")
   } else {
-  //TODO: confirm if user wants Uppercase Letters
+  // confirm if user wants Uppercase Letters
     let upperCaseSelect = confirm("Would you like your password to contain uppercase letters?")
-  //TODO: if true push upperCase array to passValues Array
+  // if true push upperCase array to passValues Array
     if(upperCaseSelect){
       passValues.push(upperCase)
     }
-  //TODO: confirm if user wants lowercase Letters
+  // confirm if user wants lowercase Letters
     let lowerCaseSelect = confirm("Would you like your password to contain lowercase letters?")
-  //TODO: if true push lowercase array to passValues Array
+  // if true push lowercase array to passValues Array
     if(lowerCaseSelect){
       passValues.push(lowerCase)
     }
-  //TODO: confirm if user wants specialChar
+  // confirm if user wants specialChar
     let spectialSelect = confirm("Would you like your password to contain special characters?")
-  //TODO: if true push specialChar array to passValues Array
+  // if true push specialChar array to passValues Array
     if(spectialSelect){
       passValues.push(specialChar)
     }
-  //TODO: confirm if user wants numbers
+  // confirm if user wants numbers
     let numSelect = confirm("Would you like your password to contain numbers?")
-  //TODO: if true push numbers array to passValues Array
+  // if true push numbers array to passValues Array
     if(numSelect){
       passValues.push(numbers)
     }
-  //TODO: Check to make sure user added at least one type of character
+  // Check to make sure user added at least one type of character
     if(upperCaseSelect === false && lowerCaseSelect === false && spectialSelect === false && numSelect === false){
       alert("You must select at least one type of character to include in your password.")
     } else {
-    //TODO: use loop to pull random characters from passValues Array
-    //TODO: Make sure given password has at least one of each selected character
+    // use loop to pull random characters from passValues Array
+    // Make sure given password has at least one of each selected character
       for(i=0;i<passValues.length;i++){
         passUnshuffled.push(passValues[i][Math.floor(Math.random()*passValues[i].length)])
       };
@@ -75,14 +75,10 @@ function generatePassword() {
         passUnshuffled.push(passValues[randomArray][Math.floor(Math.random()*passValues[randomArray].length)])
       }
 
-    //   console.log(passUnshuffled)
-    // //TODO: Rearrange selected values and push values into final password.
-    //   array.sort(function (a, b) { return 0.5 — Math.random() })
-    //   console.log(temp)
+      // return password as string
       finalPass = passUnshuffled.join()
       var res = finalPass.replace(/,/g, "")
       return res
-    //TODO: If password meets all conditions return password
     }
   
   }
