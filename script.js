@@ -17,6 +17,8 @@ generateBtn.addEventListener("click", writePassword);
 
 // Empty Password Array
 let passValues = [];
+let passUnshuffled = [];
+let finalPass = []
 
 // add variables for uppercase and lowercase 
 const upperCase= [] = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ").split("")
@@ -63,11 +65,23 @@ function generatePassword() {
       alert("You must select at least one type of character to include in your password.")
     } else {
     //TODO: use loop to pull random characters from passValues Array
-      
     //TODO: Make sure given password has at least one of each selected character
+      for(i=0;i<passValues.length;i++){
+        passUnshuffled.push(passValues[i][Math.floor(Math.random()*passValues[i].length)])
+      };
 
-    //TODO: If password does not meet condition create new password from pre selected optopns until conditions are met.
+      for(e=0; e<passLength-passValues.length; e++){
+        let randomArray = Math.floor(Math.random()*passValues.length)
+        passUnshuffled.push(passValues[randomArray][Math.floor(Math.random()*passValues[randomArray].length)])
+      }
 
+    //   console.log(passUnshuffled)
+    // //TODO: Rearrange selected values and push values into final password.
+    //   array.sort(function (a, b) { return 0.5 — Math.random() })
+    //   console.log(temp)
+      finalPass = passUnshuffled.join()
+      var res = finalPass.replace(/,/g, "")
+      return res
     //TODO: If password meets all conditions return password
     }
   
